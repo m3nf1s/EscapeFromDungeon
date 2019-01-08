@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8028366207069778435
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4866967382307811940}
+  - component: {fileID: 9181837831092576728}
+  - component: {fileID: 3968434560448429857}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: GameManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4866967382307811940
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8028366207069778435}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9181837831092576728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8028366207069778435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3808e58a86973c4aa9b6601f6274a0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelStartDelay: 2
+  levelScript: {fileID: 0}
+  canMove: 0
+--- !u!114 &3968434560448429857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8028366207069778435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cd84bf31fdfc4c48878050f05d81102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Surfaces: {fileID: 0}
+  columns: 10
+  rows: 10
+  wallCount: 22
+  enemyCount: 2
+  wallPositions: []
+  exit: {fileID: 101228, guid: 2f8bac6b7bae5254bbf64855f6613f5e, type: 3}
+  floorPrefabs:
+  - {fileID: 7900314583050085206, guid: 4eb8431654c44bb4380e6b311ec69cc6, type: 3}
+  - {fileID: 1465106286415541460, guid: 694867eb3c6c6814bb430a635288ac3c, type: 3}
+  - {fileID: 13759464324046753, guid: bde9ad47adefeca4b88717ae6ffa26b0, type: 3}
+  - {fileID: 1004788568830350617, guid: 36003e27183ddcb4885c966807c81b3c, type: 3}
+  - {fileID: 6430371009171725342, guid: 6c5accbad48d22e48a8f4f4cd9dc3f5e, type: 3}
+  - {fileID: 5383457853064510850, guid: 0c62752f2bdffaa4f8d4e3720938822f, type: 3}
+  - {fileID: 2165542043030039515, guid: ad8c703e30552e643b694bd8466db77a, type: 3}
+  - {fileID: 3707049054814942922, guid: 6217c614e225d784289b8220ddec3be2, type: 3}
+  - {fileID: 9190487836104918231, guid: 32d488c2af018524b84b8691d5593b00, type: 3}
+  - {fileID: 9013498587506804260, guid: 63a80b097121bef4ea37cea3c875a976, type: 3}
+  - {fileID: 8161769796374185028, guid: cafbd0488b75b63429bf153c23a6f70e, type: 3}
+  - {fileID: 1886438228631326286, guid: 0b8745469f2f0cb4e864c8f1e56d9a83, type: 3}
+  - {fileID: 3460905680751594259, guid: b0ac28fff6f5a404584c7804605c2659, type: 3}
+  - {fileID: 3065488595917206200, guid: c3ebe3dfcc5de5f4fa56c4272909d1bd, type: 3}
+  - {fileID: 3061963422006604593, guid: c60b152df17e12941a9416d0f7ba6ee0, type: 3}
+  wallPrefabs:
+  - {fileID: 119430, guid: 851304e60545cbc409b96f1196ef035f, type: 3}
+  - {fileID: 130060, guid: e9070fa1fd8d0f1498f03d8bf31ac2db, type: 3}
+  - {fileID: 147356, guid: a3260520512514c47832f48ff6ba3a21, type: 3}
+  - {fileID: 119146, guid: 39f0ed697681ef1478f347abd260639a, type: 3}
+  - {fileID: 153182, guid: b4f8a25dd3760bc4dae3d73a4700ea14, type: 3}
+  - {fileID: 178702, guid: 4a35e71f929fb994688db9ce77a9bf90, type: 3}
+  enemyPrefabs:
+  - {fileID: 173802, guid: 388fa61abd880a549864058f895c8045, type: 3}
+  - {fileID: 127002, guid: 99cdb7462838a6342bd2288456e75888, type: 3}
+  - {fileID: 114438, guid: 2ef59bc5d753ebe4490b708befe65999, type: 3}
+  - {fileID: 128260, guid: 616cc160fcb3b124b8e0fc587258594b, type: 3}
+  - {fileID: 171076, guid: 2ea27af6ead886c4d93bb53d28c6c25b, type: 3}
+  outerWallPrefab: {fileID: 158500, guid: a9303bd2cd5b01e43895c7af905fa35e, type: 3}
