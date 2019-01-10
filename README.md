@@ -1,6 +1,6 @@
-# EscapeFromDungeon v 0.1
+# EscapeFromDungeon v 0.1 (08.01.19)
 
-# Escape From Dungeon v 0.11
+# Escape From Dungeon v 0.11 (11.01.19)
 1) Добавлены новые звуки
 - шаги гг
 - шаги врагов
