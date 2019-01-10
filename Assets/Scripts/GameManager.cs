@@ -9,14 +9,13 @@ public class GameManager : MonoBehaviour
     public float levelStartDelay = 2.0f; // задержка 
     public static GameManager instance = null; //
     public LevelGeneration levelScript; //доступ к генератору уровней
-
     public bool canMove; // переменная, которая позволяет персонажам двигаться по карте или нет
 
     private Text levelText;
     private GameObject levelImage; 
     private int level = 0;
-    
-    
+
+
     void Awake()
     {
         if (instance == null)
@@ -39,6 +38,7 @@ public class GameManager : MonoBehaviour
         levelImage.SetActive(true);
         Invoke("HideLevelImage", 2.0f);
         levelScript.SceneSetup();
+
     }
 
     private void HideLevelImage()
@@ -53,12 +53,14 @@ public class GameManager : MonoBehaviour
         levelImage.SetActive(true);
         enabled = false;
 
-        Invoke("Quit", 1.5f);
+        Invoke("Quit", 4.0f);
     }
 
     void Quit()
     {
-        Application.Quit();
+        Destroy(gameObject);
+        Destroy(GameObject.Find("SoundManager"));
+        SceneManager.LoadScene(0);
     }
 
     void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)

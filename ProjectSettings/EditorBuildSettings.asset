@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 241d8a801cbf47c48b1ffeca92aecc99
+    path: Assets/Scenes/MainMenu.unity
+    guid: b502a46d7c4d8354280f46c0403ec710
+  - enabled: 1
+    path: Assets/Scenes/EscapeFromDungeon.unity
+    guid: 223572d66be0afa46b7bc82dab0dc31f
   m_configObjects: {}

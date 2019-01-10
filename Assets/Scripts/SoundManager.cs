@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public AudioSource music;
-    public AudioSource sound;
     public static SoundManager instance = null;
 
     void Awake()
@@ -15,13 +13,7 @@ public class SoundManager : MonoBehaviour
         else
             Destroy(gameObject);
 
-
         DontDestroyOnLoad(gameObject);
     }
 
-    public void PlaySound(AudioClip clip)
-    {
-        sound.clip = clip;
-        sound.Play();
-    }
 }

@@ -1,14 +1,18 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 
-
 public class AI : MonoBehaviour
 {
     public MeshRenderer meshRenderer; // meshrenderer FoV
     public GameManager gm; // GameManager для проверки возможности передвижения объекта
-    public AudioClip alert; //звук тревоги, что увидел противник
+    public AudioClip alertSound; //звук тревоги, что увидел противник
+    public AudioClip stepSound; //звук шагов
+    public AudioSource stepSource; // источник для шагов
+    public AudioSource soundSource; // источник для звуков
 
-    private int alertCount;
+    private Vector3 bugPosition; // коордиты объекта для проверки, если он бежит на одном месте
+    private float timeBug; // время, для проверки, если он бежит на одном месте
+    private int alertCount; // количество раз для проигрывания звука тревоги
     private NavMeshAgent _agent; // для доступ к навигационной сетке
     private LevelGeneration _lvlgen; // для доступа к списку координат для патрулирования
     private bool patrul; // проверка патрулирует объект или нет
@@ -28,6 +32,8 @@ public class AI : MonoBehaviour
         fow = GetComponent<FieldOfView>();
         meshRenderer.material.color = new Color(0f, 1f, 0f, 0.2f);
         gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        stepSource = GetComponent<AudioSource>();
+        soundSource = GetComponent<AudioSource>();
         patrul = true;
         moving = false;
     }
@@ -52,6 +58,9 @@ public class AI : MonoBehaviour
             if (moving) // если истина, то объект движется к точке
             {
                 _agent.SetDestination(_lvlgen.wallPositions[randomPosition]);
+
+                PlayStepSound();
+
                 if (Vector3.Distance(transform.position, _lvlgen.wallPositions[randomPosition]) < 0.3f)// проверка достиг объект своей цели или нет
                 {
                     anim.SetBool("Walk", false);
@@ -59,15 +68,19 @@ public class AI : MonoBehaviour
                     moving = false;
                 }
 
+                if (Vector3.Distance(transform.position, bugPosition) < 0.4f && Time.time - timeBug > 1.2f)
+                {
+                    StartWalkToPostion();
+                }
             }
             else //задержка перед движением к следующей точке
             {
-                if (Time.time - timeWait > 2f)
+                if (Time.time - timeWait > 2.0f)
                 {
-                    anim.SetBool("Walk", true);
-                    randomPosition = Random.Range(0, _lvlgen.wallPositions.Count);
-                    _agent.SetDestination(_lvlgen.wallPositions[randomPosition]);
+                    StartWalkToPostion();
                     moving = true;
+                    bugPosition = transform.position;
+                    timeBug = Time.time;
                 }
             }
         }
@@ -85,12 +98,14 @@ public class AI : MonoBehaviour
             anim.SetBool("Walk", true);
             _agent.speed = 3;
             _agent.SetDestination(player.transform.position);
+            PlayStepSound();
         }
 
         if (alertCount < 1 && fow.isSeeing)
         {
             alertCount++;
-            SoundManager.instance.PlaySound(alert);
+            soundSource.clip = alertSound;
+            soundSource.Play();
         }
         else if (player.noiseSlider.value >= 10)
             alertCount++;
@@ -107,5 +122,27 @@ public class AI : MonoBehaviour
             _agent.SetDestination(transform.position);
             anim.SetBool("Walk", false);
         }
+    }
+
+    /// <summary>
+    /// Проигрывание звуков шагов
+    /// </summary>
+    void PlayStepSound()
+    {
+        if (!stepSource.isPlaying) // проигрывание звуков шагов
+        {
+            stepSource.clip = stepSound;
+            stepSource.Play();
+        }
+    }
+
+    /// <summary>
+    /// Назначение новой случаной точки для патрулирования
+    /// </summary>
+    void StartWalkToPostion()
+    {
+        randomPosition = Random.Range(0, _lvlgen.wallPositions.Count);
+        _agent.SetDestination(_lvlgen.wallPositions[randomPosition]);
+        anim.SetBool("Walk", true);
     }
 }
