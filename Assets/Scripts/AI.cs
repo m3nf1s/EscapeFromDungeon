@@ -10,8 +10,6 @@ public class AI : MonoBehaviour
     public AudioSource stepSource; // источник для шагов
     public AudioSource soundSource; // источник для звуков
 
-    private Vector3 bugPosition; // коордиты объекта для проверки, если он бежит на одном месте
-    private float timeBug; // время, для проверки, если он бежит на одном месте
     private int alertCount; // количество раз для проигрывания звука тревоги
     private NavMeshAgent _agent; // для доступ к навигационной сетке
     private LevelGeneration _lvlgen; // для доступа к списку координат для патрулирования
@@ -68,10 +66,6 @@ public class AI : MonoBehaviour
                     moving = false;
                 }
 
-                if (Vector3.Distance(transform.position, bugPosition) < 0.4f && Time.time - timeBug > 1.2f)
-                {
-                    StartWalkToPostion();
-                }
             }
             else //задержка перед движением к следующей точке
             {
@@ -79,8 +73,6 @@ public class AI : MonoBehaviour
                 {
                     StartWalkToPostion();
                     moving = true;
-                    bugPosition = transform.position;
-                    timeBug = Time.time;
                 }
             }
         }

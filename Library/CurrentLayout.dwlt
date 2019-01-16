@@ -384,23 +384,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 12250000
       m_LastClickedID: 0
-      m_ExpandedIDs: c27afdffe27afdffc27dfdff5e84fdff2c90fdffd091fdff7a0afeff4859feffe861feff8464ffffccc4ffffccc5fffff0c5ffffccc8ffffd8c8fffffed5ffff54e2ffffc6eeffffd4fbffffae4d0000ca5d0000
+      m_ExpandedIDs: bafbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Enemies
-        m_OriginalName: Enemies
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -128390
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -476,9 +476,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.35203815, y: 0.61615574, z: -0.35714495, w: -0.6073457}
   m_Size:
-    m_Target: 2.745285
+    m_Target: 7.8310947
     speed: 2
-    m_Value: 2.745285
+    m_Value: 7.8310947
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -635,20 +635,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Andrey\Desktop\EscapeFromDungeon-master
+  m_LastProjectPath: D:\Git\EscapeFromDungeon
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 109}
-    m_SelectedIDs: 02310000
-    m_LastClickedID: 12546
-    m_ExpandedIDs: 00000000b02c0000d82c0000302e000000340000de340000bc400000ea40000078430000384400002e4500008656000000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 90330000
+    m_LastClickedID: 13200
+    m_ExpandedIDs: 00000000c02c0000e82c0000402e000010340000ee340000cc400000fa40000088430000484400003e4500009256000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -676,7 +676,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b02c0000d82c0000302e000000340000de340000bc400000ea40000078430000384400002e45000086560000
+    m_ExpandedIDs: 00000000c02c0000e82c0000402e000010340000ee340000cc400000fa40000088430000484400003e45000092560000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -703,7 +703,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: f43700003a560000223700007e2d0000263c0000ea3d0000d634000000000000ca5c00008ed20100aeca0100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
