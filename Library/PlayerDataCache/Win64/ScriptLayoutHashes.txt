@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/Andrey/Desktop/EscapeFromDungeon-master/Build/EscapeFromDungeon.exe
+D:/Git/EscapeFromDungeon/Build/EscapeFromDungeon.exe
 SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/EscapeFromDungeon.unity

@@ -68,9 +68,10 @@ public class AI : MonoBehaviour
                     moving = false;
                 }
 
-                if (Vector3.Distance(transform.position, bugPosition) < 0.4f && Time.time - timeBug > 1.2f)
+                if (Vector3.Distance(transform.position, bugPosition) < 0.4f && Time.time - timeBug > 1.5f)
                 {
                     StartWalkToPostion();
+                    timeBug = Time.time;
                 }
             }
             else //задержка перед движением к следующей точке
