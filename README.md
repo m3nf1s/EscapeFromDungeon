@@ -1,5 +1,5 @@
 # Escape From Dungeon (PC)
-
+[![Sample](https://github.com/m3nf1s/EscapeFromDungeon/blob/master/Sample.jpg)]
 Перед нами поле 10 на 10 ячеек.
 
 На поле расставлены блоки (непроходимые) - необходимо сделать авто генерацию уровня, но обязательно обеспечить хотябы один путь к выходу.
